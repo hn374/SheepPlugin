@@ -8,6 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e2363e8e-86f7-43c9-b6b5-6bd395998aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SheepCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SheepCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SheepPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SheepPlugin.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +34,7 @@
   <component name="ProjectId" id="1cjrSXevL99umNgYqW88YPp10rD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -46,15 +53,19 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SheepPlugin" />
       <module name="SheepCommand" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -74,7 +85,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -26,13 +26,17 @@ public class SheepCommand implements CommandExecutor {
             Location spawnLocation = player.getLocation().add(2, 0,0);
             World world = player.getWorld();
 
-            Sheep sheep = (Sheep) world.spawnEntity(spawnLocation, EntityType.SHEEP);
-            sheep.setCustomName(playerName + "\'s Sheep");
+//            Sheep sheep = (Sheep) world.spawnEntity(spawnLocation, EntityType.SHEEP);
+//            sheep.setCustomName(playerName + "\'s Sheep");
+//            sheep.setCustomNameVisible(true);
+
+//            CustomSheep sheep = (CustomSheep) world.spawnEntity(spawnLocation, EntityType.);
+//            sheep.setCustomName(playerName + "\'s Sheep");
             sheep.setCustomNameVisible(true);
-//            sheep.setLeashHolder(player);
 
             player.sendMessage("Congratulations, you have a new pet sheep!");
-            followPlayer(player, sheep);
+
+            followPlayer(player, (Entity) sheep);
 
             return true;
         } else {

@@ -1,5 +1,6 @@
 package com.company;
 
+import net.minecraft.server.v1_8_R3.EntitySheep;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SheepPlugin extends JavaPlugin {
@@ -12,7 +13,11 @@ public final class SheepPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+
         getLogger().info("SheepPlugin is working!");
+        getServer().getPluginManager().registerEvents(new SheepEvent(), this);
+        NMSUtils.registerEntity("Sheep", 91, EntitySheep.class, CustomSheep.class);
+
         this.getCommand("sheep").setExecutor(new SheepCommand());
     }
 }
