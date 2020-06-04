@@ -1,5 +1,6 @@
 package com.company.events;
 
+import org.bukkit.entity.Cow;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Sheep;
@@ -11,7 +12,7 @@ public class RidingFallEvent implements Listener {
 
     @EventHandler
     public void onDamage(EntityDamageEvent event){
-        if((event.getEntity() instanceof Player)){
+        if((event.getEntity() instanceof Player)){ // Player
             Player player = (Player) event.getEntity();
 
             if(player.isInsideVehicle()) {
@@ -22,7 +23,7 @@ public class RidingFallEvent implements Listener {
                     event.setCancelled(true);
                 }
             }
-        } else if (event.getEntity() instanceof Sheep) {
+        } else if (event.getEntity() instanceof Sheep) { // Sheep
             Sheep sheep = (Sheep) event.getEntity();
 
             if (sheep.getPassenger() != null) {
@@ -33,7 +34,7 @@ public class RidingFallEvent implements Listener {
                     event.setCancelled(true);
                 }
             }
-        } else if (event.getEntity() instanceof Pig) {
+        } else if (event.getEntity() instanceof Pig) { // Pig
             Pig pig = (Pig) event.getEntity();
 
             if (pig.getPassenger() != null) {
@@ -44,8 +45,18 @@ public class RidingFallEvent implements Listener {
                     event.setCancelled(true);
                 }
             }
-        }
+        } else if (event.getEntity() instanceof Cow) { // Cow
+            Cow cow = (Cow) event.getEntity();
 
+            if (cow.getPassenger() != null) {
+                if (event.getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+                if (cow.getLastDamageCause().getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+            }
+        }
     }
 }
 

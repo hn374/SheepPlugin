@@ -11,3 +11,6 @@ commands:
   pig:
     description: Create a pig.
     usage: "Usage: /<command>"
+  cow:
+    description: Create a cow.
+    usage: "Usage: /<command>"
