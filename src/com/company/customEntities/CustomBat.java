@@ -3,19 +3,30 @@ package com.company.customEntities;
 import net.minecraft.server.v1_8_R3.*;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftBat;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftLivingEntity;
-import org.bukkit.entity.Cow;
+import org.bukkit.entity.Bat;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 
 import java.lang.reflect.Field;
+import java.util.List;
 
-public class CustomCow extends EntityCow {
+public class CustomBat extends EntityBat {
 
     protected Field FIELD_JUMP = null;
 
-    public CustomCow(World world) {
+    public CustomBat(World world) {
+//        super(world);
+//
         super(world);
+        List goalB = (List) getPrivateField("b", PathfinderGoalSelector.class, goalSelector); goalB.clear();
+        List goalC = (List) getPrivateField("c", PathfinderGoalSelector.class, goalSelector); goalC.clear();
+        List targetB = (List) getPrivateField("b", PathfinderGoalSelector.class, targetSelector); targetB.clear();
+        List targetC = (List) getPrivateField("c", PathfinderGoalSelector.class, targetSelector); targetC.clear();
+
+        this.goalSelector.a(0, new PathfinderGoalFloat(this));
+        this.goalSelector.a(8, new PathfinderGoalLookAtPlayer(this, EntityHuman.class, 8.0F));
+        this.goalSelector.a(8, new PathfinderGoalRandomLookaround(this));
 
         if (FIELD_JUMP == null) {
             try {
@@ -25,6 +36,27 @@ public class CustomCow extends EntityCow {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static Object getPrivateField(String fieldName, Class clazz, Object object)
+    {
+        Field field;
+        Object o = null;
+        try
+        {
+            field = clazz.getDeclaredField(fieldName);
+            field.setAccessible(true);
+            o = field.get(object);
+        }
+        catch(NoSuchFieldException e)
+        {
+            e.printStackTrace();
+        }
+        catch(IllegalAccessException e)
+        {
+            e.printStackTrace();
+        }
+        return o;
     }
 
     @Override
@@ -80,16 +112,16 @@ public class CustomCow extends EntityCow {
         }
     }
 
-    public static Cow spawn(Location location) {
+    public static Bat spawn(Location location) {
         World mcWorld = ((CraftWorld) location.getWorld()).getHandle();
 
-        CustomCow customEntity = new CustomCow(mcWorld);
+        CustomBat customEntity = new CustomBat(mcWorld);
         customEntity.setLocation(location.getX(), location.getY(), location.getZ(), location.getYaw(), location.getPitch());
 
         ((CraftLivingEntity) customEntity.getBukkitEntity()).setRemoveWhenFarAway(false);
 
         mcWorld.addEntity(customEntity, CreatureSpawnEvent.SpawnReason.CUSTOM);
 
-        return (CraftCow) customEntity.getBukkitEntity();
+        return (CraftBat) customEntity.getBukkitEntity();
     }
 }

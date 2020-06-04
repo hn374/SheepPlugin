@@ -14,3 +14,6 @@ commands:
   cow:
     description: Create a cow.
     usage: "Usage: /<command>"
+  bat:
+    description: Create a bat.
+    usage: "Usage: /<command>"

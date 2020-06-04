@@ -1,9 +1,6 @@
 package com.company.events;
 
-import org.bukkit.entity.Cow;
-import org.bukkit.entity.Pig;
-import org.bukkit.entity.Player;
-import org.bukkit.entity.Sheep;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -53,6 +50,17 @@ public class RidingFallEvent implements Listener {
                     event.setCancelled(true);
                 }
                 if (cow.getLastDamageCause().getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+            }
+        } else if (event.getEntity() instanceof Bat) { // Bat
+            Bat bat = (Bat) event.getEntity();
+
+            if (bat.getPassenger() != null) {
+                if (event.getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+                if (bat.getLastDamageCause().getCause() == EntityDamageEvent.DamageCause.FALL){
                     event.setCancelled(true);
                 }
             }

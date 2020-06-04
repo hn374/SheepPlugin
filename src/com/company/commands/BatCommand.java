@@ -1,7 +1,7 @@
 package com.company.commands;
 
 import com.company.SheepPlugin;
-import com.company.customEntities.CustomCow;
+import com.company.customEntities.CustomBat;
 import net.minecraft.server.v1_8_R3.EntityInsentient;
 import net.minecraft.server.v1_8_R3.PathEntity;
 import org.bukkit.Location;
@@ -9,13 +9,14 @@ import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftBat;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity;
-import org.bukkit.entity.Cow;
+import org.bukkit.entity.Bat;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class CowCommand implements CommandExecutor {
+public class BatCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
@@ -26,13 +27,14 @@ public class CowCommand implements CommandExecutor {
             Location spawnLocation = player.getLocation().add(2, 0,0);
 //            World world = player.getWorld();
 
-            Cow cow = CustomCow.spawn(spawnLocation);
-            cow.setCustomName(playerName + "\'s Cow");
-            cow.setCustomNameVisible(true);
+            Bat bat = CustomBat.spawn(spawnLocation);
+//            ((CraftBat) bat).getHandle().k(true);
+            bat.setCustomName(playerName + "\'s Bat");
+            bat.setCustomNameVisible(true);
 
-            player.sendMessage("Congratulations, you have a new pet cow!");
+            player.sendMessage("Congratulations, you have a new pet bat!");
 
-            followPlayer(player, cow);
+            followPlayer(player, bat);
 
             return true;
         } else {
@@ -41,7 +43,7 @@ public class CowCommand implements CommandExecutor {
         }
     }
 
-    public void followPlayer(Player player, Entity cow) {
+    public void followPlayer(Player player, Entity bat) {
         System.out.println("The follow player command has been called.");
         new BukkitRunnable() {
 
@@ -49,26 +51,26 @@ public class CowCommand implements CommandExecutor {
             public void run() {
                 PathEntity path;
 
-                if(!cow.isValid() || !player.isOnline()) {
+                if(!bat.isValid() || !player.isOnline()) {
                     this.cancel();
                     return;
                 }
 
-                Object cowObject = ((CraftEntity) cow).getHandle();
+                Object batObject = ((CraftEntity) bat).getHandle();
 
                 Location location = player.getLocation();
 
-                path = ((EntityInsentient) cowObject).getNavigation().a(location.getX() + 1, location.getY(), location.getZ() + 1);
+                path = ((EntityInsentient) batObject).getNavigation().a(location.getX() + 1, location.getY(), location.getZ() + 1);
 
                 if(path != null) {
-                    ((EntityInsentient) cowObject).getNavigation().a(path, 1.0D);
-                    ((EntityInsentient) cowObject).getNavigation().a(2.0D);
+                    ((EntityInsentient) batObject).getNavigation().a(path, 1.0D);
+                    ((EntityInsentient) batObject).getNavigation().a(2.0D);
                 }
 
-                int distance = (int) location.distance(cow.getLocation());
+                int distance = (int) location.distance(bat.getLocation());
 
-                if(distance > 10 && !cow.isDead()) {
-                    cow.teleport(location);
+                if(distance > 10 && !bat.isDead()) {
+                    bat.teleport(location);
                 }
             }
         }.runTaskTimerAsynchronously(SheepPlugin.getInstance(), 0L, 20L);
