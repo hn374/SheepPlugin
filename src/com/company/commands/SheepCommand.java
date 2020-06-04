@@ -1,12 +1,13 @@
-package com.company;
+package com.company.commands;
 
+import com.company.customEntities.CustomSheep;
+import com.company.SheepPlugin;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Sheep;
 import org.bukkit.scheduler.BukkitRunnable;

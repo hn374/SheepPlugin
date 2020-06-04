@@ -1,41 +1,20 @@
-package com.company;
+package com.company.customEntities;
 
-import net.minecraft.server.v1_8_R3.EntitySheep;
-import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep;
-import org.bukkit.entity.Sheep;
-
-//public class CustomSheep extends EntitySheep {
-////    public CustomSheep(org.bukkit.World world) {
-////        super(((CraftWorld) world).getHandle());
-////
-////        Sheep customSheep = (Sheep) this.getBukkitEntity();
-////        this.setCustomName("Fuck Me");
-////
-////        // Add the custom sheep to the world when constructor is called
-////        this.getWorld().addEntity(this);
-////    }
-////}
-
-import java.lang.reflect.Field;
-
-import net.minecraft.server.v1_8_R3.EntityHuman;
-import net.minecraft.server.v1_8_R3.EntityInsentient;
-import net.minecraft.server.v1_8_R3.EntityLiving;
-import net.minecraft.server.v1_8_R3.GenericAttributes;
-import net.minecraft.server.v1_8_R3.MathHelper;
-import net.minecraft.server.v1_8_R3.World;
-
+import net.minecraft.server.v1_8_R3.*;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftLivingEntity;
-import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPig;
+import org.bukkit.entity.Pig;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 
-public class CustomSheep extends EntitySheep {
+import java.lang.reflect.Field;
+
+public class CustomPig extends EntityPig {
 
     protected Field FIELD_JUMP = null;
 
-    public CustomSheep(World world) {
+    public CustomPig(World world) {
         super(world);
 
         if (FIELD_JUMP == null) {
@@ -101,19 +80,16 @@ public class CustomSheep extends EntitySheep {
         }
     }
 
-    public static Sheep spawn(Location location) {
+    public static Pig spawn(Location location) {
         World mcWorld = (World) ((CraftWorld) location.getWorld()).getHandle();
 
-        CustomSheep customEntity = new CustomSheep(mcWorld);
+        CustomPig customEntity = new CustomPig(mcWorld);
         customEntity.setLocation(location.getX(), location.getY(), location.getZ(), location.getYaw(), location.getPitch());
 
         ((CraftLivingEntity) customEntity.getBukkitEntity()).setRemoveWhenFarAway(false);
 
-        mcWorld.addEntity(customEntity, SpawnReason.CUSTOM);
+        mcWorld.addEntity(customEntity, CreatureSpawnEvent.SpawnReason.CUSTOM);
 
-//        customEntity.setCustomName("");
-//        customEntity.setCustomNameVisible(false);
-
-        return (CraftSheep) customEntity.getBukkitEntity();
+        return (CraftPig) customEntity.getBukkitEntity();
     }
 }

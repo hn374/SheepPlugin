@@ -1,5 +1,6 @@
-package com.company;
+package com.company.events;
 
+import org.bukkit.entity.Pig;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Sheep;
 import org.bukkit.event.EventHandler;
@@ -32,7 +33,19 @@ public class RidingFallEvent implements Listener {
                     event.setCancelled(true);
                 }
             }
+        } else if (event.getEntity() instanceof Pig) {
+            Pig pig = (Pig) event.getEntity();
+
+            if (pig.getPassenger() != null) {
+                if (event.getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+                if (pig.getLastDamageCause().getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+            }
         }
+
     }
 }
 

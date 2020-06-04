@@ -1,4 +1,4 @@
-package com.company;
+package com.company.events;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -7,18 +7,17 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 
-public class SheepEvent implements Listener {
+public class PigEvent implements Listener {
 
     @EventHandler
-    public void SheepRightClick(PlayerInteractEntityEvent event) {
+    public void PigRightClick(PlayerInteractEntityEvent event) {
 
-        if (event.getRightClicked().getType() == EntityType.SHEEP) {
-            // Get the player and sheep that was right clicked
+        if (event.getRightClicked().getType() == EntityType.PIG) {
             Player player = (Player) event.getPlayer();
-            Entity sheep = (Entity) event.getRightClicked();
+            Entity pig = (Entity) event.getRightClicked();
 
             // Set the passenger to be the player
-            sheep.setPassenger(player);
+            pig.setPassenger(player);
         }
     }
 }

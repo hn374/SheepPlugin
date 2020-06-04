@@ -1,4 +1,4 @@
-package com.company;
+package com.company.utils;
 
 import net.minecraft.server.v1_8_R3.BiomeBase;
 import net.minecraft.server.v1_8_R3.EntityInsentient;

@@ -8,3 +8,6 @@ commands:
   sheep:
     description: Create a sheep.
     usage: "Usage: /<command>"
+  pig:
+    description: Create a pig.
+    usage: "Usage: /<command>"

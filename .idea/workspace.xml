@@ -7,13 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2363e8e-86f7-43c9-b6b5-6bd395998aa6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/commands/PigCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/customEntities/CustomPig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/events/PigEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/CustomSheep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/CustomSheep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/CustomSheep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/NMSUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/RidingFallEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepEvent.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/CustomSheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CustomSheep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SheepCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SheepCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CustomSheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/customEntities/CustomSheep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/NMSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/utils/NMSUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/RidingFallEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/events/RidingFallEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SheepCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/commands/SheepCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SheepEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/events/SheepEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SheepPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SheepPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +47,7 @@
   <component name="ProjectId" id="1cjrSXevL99umNgYqW88YPp10rD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
