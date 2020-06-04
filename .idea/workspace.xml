@@ -8,10 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e2363e8e-86f7-43c9-b6b5-6bd395998aa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/CustomSheep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/CustomSheep.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CustomSheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CustomSheep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SheepCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SheepCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SheepPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SheepPlugin.java" afterDir="false" />
     </list>

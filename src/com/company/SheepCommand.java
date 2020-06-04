@@ -30,8 +30,8 @@ public class SheepCommand implements CommandExecutor {
 //            sheep.setCustomName(playerName + "\'s Sheep");
 //            sheep.setCustomNameVisible(true);
 
-//            CustomSheep sheep = (CustomSheep) world.spawnEntity(spawnLocation, EntityType.);
-//            sheep.setCustomName(playerName + "\'s Sheep");
+            Sheep sheep = CustomSheep.spawn(spawnLocation);
+            sheep.setCustomName(playerName + "\'s Sheep");
             sheep.setCustomNameVisible(true);
 
             player.sendMessage("Congratulations, you have a new pet sheep!");

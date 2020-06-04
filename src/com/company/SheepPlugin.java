@@ -15,7 +15,9 @@ public final class SheepPlugin extends JavaPlugin {
         instance = this;
 
         getLogger().info("SheepPlugin is working!");
+
         getServer().getPluginManager().registerEvents(new SheepEvent(), this);
+        getServer().getPluginManager().registerEvents(new RidingFallEvent(), this);
         NMSUtils.registerEntity("Sheep", 91, EntitySheep.class, CustomSheep.class);
 
         this.getCommand("sheep").setExecutor(new SheepCommand());
