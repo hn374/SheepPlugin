@@ -20,3 +20,6 @@ commands:
   zombie:
     decsription: Create a baby zombie.
     usage: "Usage: /<command>"
+  slime:
+    decsription: Create a slime.
+    usage: "Usage: /<command>"

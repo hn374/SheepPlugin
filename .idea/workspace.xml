@@ -7,12 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2363e8e-86f7-43c9-b6b5-6bd395998aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/commands/BabyZombieCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/customEntities/CustomZombie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/events/ZombieEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/commands/SlimeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/customEntities/CustomSlime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/events/SlimeEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SheepCommand_jar/SheepCommand.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/META-INF/SheepCommand.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/SheepPlugin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/com/company/events/RidingFallEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/com/company/events/RidingFallEvent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SheepCommand/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SheepCommand/plugin.yml" afterDir="false" />
