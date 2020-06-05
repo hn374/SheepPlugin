@@ -64,6 +64,17 @@ public class RidingFallEvent implements Listener {
                     event.setCancelled(true);
                 }
             }
+        } else if (event.getEntity() instanceof Zombie) { // Bat
+            Zombie zombie = (Zombie) event.getEntity();
+
+            if (zombie.getPassenger() != null) {
+                if (event.getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+                if (zombie.getLastDamageCause().getCause() == EntityDamageEvent.DamageCause.FALL){
+                    event.setCancelled(true);
+                }
+            }
         }
     }
 }

@@ -17,3 +17,6 @@ commands:
   bat:
     description: Create a bat.
     usage: "Usage: /<command>"
+  zombie:
+    decsription: Create a baby zombie.
+    usage: "Usage: /<command>"
